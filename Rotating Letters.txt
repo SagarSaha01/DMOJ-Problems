@@ -1,0 +1,13 @@
+letters = "IOSHZXN"
+true = 0
+false = 0
+word = input()
+for i in word:
+    if i not in letters:
+        false = false + 1
+
+if false > 0:
+    print("NO")
+
+else:
+    print("YES")

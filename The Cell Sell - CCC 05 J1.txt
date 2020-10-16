@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int daytime, evening, weekend;
+    double totalcostA, totalcostB;
+    double daycostA = 0, evecostA = 0, weekcostA = 0;
+    double daycostB = 0, evecostB = 0, weekcostB = 0;
+    cin >> daytime >> evening >> weekend;
+   // int planA, planB;
+    if(daytime > 100) {
+        daycostA= (daytime - 100) * 0.25;
+    } else daycostA= 0;
+    evecostA = evening * 0.15;
+    weekcostA = weekend * 0.20;
+
+    if (daytime > 250)
+    {
+        daycostB = (daytime - 250) * 0.45;
+    }
+    evecostB = evening * 0.35;
+    weekcostB = weekend * 0.25;
+    totalcostA = daycostA + evecostA + weekcostA;
+    totalcostB = daycostB + evecostB + weekcostB;
+    cout << "Plan A costs ";
+    printf("%0.2lf\n", totalcostA);
+    cout << "Plan B costs ";
+    printf("%0.2lf\n", totalcostB);
+
+    if (totalcostB == totalcostA)
+        cout << "Plan A and B are the same price." << endl;
+    else if (totalcostA < totalcostB)
+        cout << "Plan A is cheapest." << endl;
+    else cout << "Plan B is cheapest." << endl;
+
+    return 0;
+}

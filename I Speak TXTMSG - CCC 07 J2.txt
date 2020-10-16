@@ -1,0 +1,67 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main ()
+
+{
+    string text;
+    while (cin >> text) {
+        for (int i = 0; i < text.length(); i++)
+        {
+            if (text[i] == 'C' and text [i+1] == 'U') {
+                cout << "see you" << endl;
+                break;
+            }
+            else if (text[i] == ':' and text[i+1] == '-' and text[i+2] == ')') {
+                cout << "I'm happy" << endl;
+                break;
+            }
+            else if (text[i] == ':' and text[i+1] == '-' and text[i+2] == '(') {
+                cout << "I'm sad" << endl;
+                break;
+            }
+            else if (text[i] == ';' and text[i+1] == '-' and text[i+2] == ')') {
+                cout << "wink" << endl;
+                break;
+            }
+            else if (text[i] == ':' and text[i+1] == '-' and text[i+2] == 'P') {
+                cout << "stick out my tongue" << endl;
+                break;
+            }
+            else if (text[i] == '(' and text[i+1] == '~' and text[i+2] == '.' and text[i+3] == '~' and text[i+4] == ')') {
+                cout << "sleepy" << endl;
+                break;
+            }
+            else if (text[i] == 'T' and text[i+1] == 'A') {
+                cout << "totally awesome" << endl;
+                break;
+            }
+            else if (text[i] == 'C' and text[i+1] == 'C' and text[i+2] == 'C') {
+                cout << "Canadian Computing Competition" << endl;
+                break;
+            }
+            else if (text[i] == 'C' and text[i+1] == 'U' and text[i+2] == 'Z') {
+                cout << "because" << endl;
+                break;
+            }
+            else if (text[i] == 'T' and text[i+1] == 'Y') {
+                cout << "thank-you" << endl;
+                break;
+            }
+            else if (text[i] == 'Y' and text[i+1] == 'W') {
+                cout << "you're welcome" << endl;
+                break;
+            }
+            else if (text[i] == 'T' and text[i+1] == 'T' and text[i+2] == 'Y' and text[i+3] == 'L') {
+                cout << "talk to you later" << endl;
+                break;
+            }    
+            else {
+                cout << text << endl;
+                break;
+            }
+        }
+    }
+
+    return 0;
+}

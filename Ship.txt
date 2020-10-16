@@ -1,0 +1,13 @@
+word = "BFTLC"
+string = ""
+line = input()
+for letter in word:
+    if letter not in line:
+        string = string + letter
+
+test = set(string)
+if string != "":
+    for i in test:
+        print(i)
+else:
+    print("NO MISSING PARTS")

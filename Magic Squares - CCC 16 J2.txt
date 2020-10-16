@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16;
+    cin >> i1 >> i2 >> i3 >> i4 >> i5 >> i6 >> i7 >> i8 >> i9 >> i10 >> i11 >> i12 >> i13 >> i14 >> i15 >> i16;
+    int r1, r2, r3, r4, c1, c2, c3, c4;
+    r1 = i1 + i2 + i3 + i4;
+    r2 = i5 + i6 + i7 + i8;
+    r3 = i9 + i10 + i11 + i12;
+    r4 = i13 + i14 + i15 + i16;
+    c1 = i1 + i5 + i9 + i13;
+    c2 = i2 + i6 + i10 + i14;
+    c3 = i3 + i7 + i11 + i15;
+    c4 = i4 + i8 + i12 + i16;
+
+    if (r1 == r2 and r2 == r3 and r3 == r4 and r4 == c1 and c1 == c2 and c2 == c3 and c3 == c4)
+        cout << "magic" << endl;
+    else cout << "not magic" << endl;
+
+    return 0;
+}

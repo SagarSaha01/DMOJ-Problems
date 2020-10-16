@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+    int n, j, sum;
+    cin >> n >> j;
+    sum = n;
+    for (int i = 0; i < j; ++i)
+    {
+        n = n * 10;
+        sum = sum + n;
+    }
+    cout << sum;
+
+    return 0;
+}

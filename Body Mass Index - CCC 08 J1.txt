@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+    double w, h;
+    cin >> w >> h;
+    double total = w/(h*h);
+    if (total > 25)
+        cout << "Overweight" << endl;
+    else if (total >= 18.5 and total <= 25)
+        cout << "Normal weight" << endl;
+    else if (total < 18.5)
+        cout << "Underweight" << endl;
+
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    
+    if (a == 60 and b == 60 and c == 60)
+        cout << "Equilateral" << endl;
+    else if (a + b + c == 180 and a != b and a != c and b != c)
+        cout << "Scalene" << endl;
+    else if ((a + b + c) != 180)
+        cout << "Error" << endl;
+    else if (a + b + c == 180 and (a == b or a == c or b == c))
+        cout << "Isosceles" << endl;
+    return 0;
+}

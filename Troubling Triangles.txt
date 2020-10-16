@@ -1,0 +1,25 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main ()
+
+{
+    int n;
+    float ax, ay, bx, by, cx, cy, area = 0.0, ab = 0.0, bc = 0.0, ac = 0.0, perimeter = 0.0;
+    cin >> n;
+    for (int i = 0; i < n; ++i) {
+        cin >> ax >> ay >> bx >> by >> cx >> cy;
+        area = abs((ax * (by - cy) + bx * (cy - ay) + cx * (ay - by)) / 2);
+        ab = sqrt((ax-bx)*(ax-bx) + (ay-by)*(ay-by));
+        bc = sqrt((bx-cx)*(bx-cx) + (by-cy)*(by-cy));
+        ac = sqrt((ax-cx)*(ax-cx) + (ay-cy)*(ay-cy));
+        perimeter = ab+bc+ac;
+        printf("%0.2f", area);
+        cout << " ";
+        printf ("%0.2f", perimeter);
+        cout << endl;
+    }
+
+    return 0;
+}
+    

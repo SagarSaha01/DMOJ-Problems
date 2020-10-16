@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main () {
+    string input;
+    int total = 0;
+    cin >> input;
+
+    while (input != "quit!") {
+        if (input.length() > 4 && input[input.length() - 2] == 'o' && input[input.length() - 1] == 'r' && input[input.length() - 3] != 'a' && input[input.length() - 3] != 'e' && input[input.length() - 3] != 'i' && input[input.length() - 3] != 'o' && input[input.length() - 3] != 'u' && input[input.length() - 3] != 'y')
+            input.insert(input.length() - 1, "u");
+        cout << input << endl;
+
+        cin >> input;
+    }
+    return 0;
+}

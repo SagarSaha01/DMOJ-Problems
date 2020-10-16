@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+
+{
+    int n, set = 0, count = 0;
+    int correct = 0, space = 0;
+    cin >> n;
+    string words[n], sentence, dictionary[100000], line;
+    for (int i = 0; i < n; ++i)
+    {
+        cin >> words[i];
+    }
+    while (getline(cin, line)) {
+        sentence += ' '+ line;
+    }
+    
+    for (int j = 0; j < sentence.length(); ++j)
+    {
+        if (sentence[j] == ' ')
+        {
+            set++;
+            count++;
+        }
+        else
+            dictionary[set] = dictionary[set] + sentence[j];
+    }
+    for (int k = 0; k < (count+1); ++k)
+    {
+        for (int d = 0; d < n; ++d)
+        {
+            if (dictionary[k] == words[d])
+            {
+                correct++;
+                break;
+            }
+            else continue;
+        }
+        if (dictionary[k] != "")
+          space++;
+    }
+    if (correct == space)
+        cout << "Correct" << endl;
+    else
+        cout << "Incorrect" << endl;
+
+
+    return 0;
+}

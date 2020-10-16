@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main ()
+{
+    int set = 0, nott = 0;
+    // getchar();
+    string input;
+    getline(cin, input);
+    string array[input.length()];
+    for (int i = 0; i < input.length(); ++i) {
+        if (input[i] == ' ') {
+            set++;
+        } else {
+            array[set] = array[set] + input[i];
+        }
+    }
+    for (int j = 0; j < set; ++j) {
+        if (array[j] == "not")
+        {
+            nott++;
+        }
+    }
+    if (array[set] == "False" and nott % 2 == 0)
+        cout << "False" << endl;
+    else if (array[set] == "False" and nott % 2 != 0)
+        cout << "True" << endl;
+    else if (array[set] == "True" and nott % 2 == 0)
+        cout << "True" << endl;
+    else if (array[set] == "True" and nott % 2 != 0)
+        cout << "False" << endl;
+
+    return 0;
+}
